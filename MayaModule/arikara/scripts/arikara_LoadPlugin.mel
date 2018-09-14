@@ -1,0 +1,7 @@
+global proc arikara_LoadPlugin()
+{
+    if (!`pluginInfo -query -loaded "arikaraSkinEditor.mll"`)
+    {
+        loadPlugin "arikaraSkinEditor.mll";
+    }
+};

@@ -1,0 +1,87 @@
+Issue when deleting bones ( Create a call back when scene object is deleted and remove it from the tool.  Or update the tool influence list when mouse enter.)
+
+Attach Skin support vertex selection.
+
+crash when unloading the plugin.
+
+load skin data with a vertex selection ??
+
+Sometimes the name dosen't appear completely when using set from tool button of the transfer weight
+
+Mirror Skin with face selection ?
+
+Attach Issue with undo.
+
+When use add influences or attach.
+// Error: line 1: Too many arguments.  Expected 20, found 21. // 
+
+Multi thread when sliding ?
+
+UI:
+    - Weight Edition Tab
+        - Add painter with the mode;
+        - diseable button when no object is set.
+
+SetWeight:
+    - Custom set weight function not using MfnSkinCluster.
+
+
+vertex tab:
+transfert weight (make a command, support soft selection ?)
+
+#Should make a deformer node for this. this is too slow when setting it with mfn.
+Vertex color, vertex Weight display
+
+Locked:
+    vertex display
+    support soft selection locked vertex ?
+
+SkinData:
+	1. Load by skinWrap. ??
+
+Set Skin Weight:
+	1. No check is being done for locked influences. when sliding.
+
+SkinMode:
+	2. Smooth Skin.
+
+Max Influences:
+	1. Max Influences is not maintained when setting weight.
+		a. It should be manually applied with the max influences button.
+		b. Or should it be maintained when editing weights ?
+    2. Max influence in option file.
+    3. Max Influence multitread cmds ?
+
+info:
+Executing mel from API
+http://ewertb.soundlinker.com/api/api.019.php
+
+https://nccastaff.bournemouth.ac.uk/jmacey/RobTheBloke/www/research/maya/mfnskinning.htm
+
+
+--------------ITS SLOW AS FUCK ------------------------
+check how to manipulate array
+--------------------------
+change weight value using mfndependency node and plug:
+
+import maya.api.OpenMaya as om
+
+
+sel = om.MSelectionList()
+sel.add("skinCluster1")
+skinObj = sel.getDependNode(0)
+
+
+skintest = om.MFnDependencyNode(skinObj)
+
+weightPlug = skintest.findPlug("weightList", False)
+
+#get the weight plug for the vertex id
+vOneWeightPlug = weightPlug.elementByLogicalIndex(vertex ID)
+#get the weightlist for the vertex.
+weight = vOneWeightPlug.child(0)
+
+#if the frist weight element is on index 1 in maya:
+print weight.elementByPhysicalIndex(0).asDouble()
+or
+print weight.elementByLogicalIndex(1).asDouble()

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pluginMain.cpp" />
+    <ClCompile Include="Editor\ArikaraSkinEditor.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\source\ArikaraSkin.cpp">
+      <Filter>ArikaraMaya\source</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\source\ArikaraSkinEditorCmd.cpp">
+      <Filter>ArikaraMaya\source</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\source\MayaSkinFunction.cpp">
+      <Filter>ArikaraMaya\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\WeightEditionTab.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\VertexTab.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\MirrorWeightWidget.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\command\ArikaraMirrorWeightCmd.cpp">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\command\ArikaraSkinEditorSetWeightCmd.cpp">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\command\ArikaraInfluenceCmd.cpp">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\command\ArikaraTransferWeightCmd.cpp">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\ArikaraOptions.cpp">
+      <Filter>ArikaraMaya</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiThread.cpp" />
+    <ClCompile Include="ArikaraMaya\command\ArikaraSkinDataCmd.cpp">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalDefine.cpp" />
+    <ClCompile Include="Editor\SkinDataWidget.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\command\ArikaraAttachSkinCmd.cpp">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClCompile>
+    <ClCompile Include="ArikaraMaya\source\ArikaraMath.cpp">
+      <Filter>ArikaraMaya\source</Filter>
+    </ClCompile>
+    <ClCompile Include="skinMode\SkinModeBase.cpp">
+      <Filter>skinMode</Filter>
+    </ClCompile>
+    <ClCompile Include="skinMode\InteractiveEdit.cpp">
+      <Filter>skinMode</Filter>
+    </ClCompile>
+    <ClCompile Include="skinMode\VertexInfluenceData.cpp">
+      <Filter>skinMode</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{d8b2f1cd-9376-4303-a516-e1fb30ed64b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArikaraMaya">
+      <UniqueIdentifier>{6477e797-3e05-4c94-99ad-eeeb4cfb58ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArikaraMaya\include">
+      <UniqueIdentifier>{d5e8076b-cce4-4a8f-96c2-1382c19ac0c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArikaraMaya\source">
+      <UniqueIdentifier>{2fce7290-e381-402b-baf8-d5481fc2ea2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArikaraMaya\command">
+      <UniqueIdentifier>{7212375f-acba-4d14-8b61-e7a6525c59c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegate">
+      <UniqueIdentifier>{60e8d230-5c93-4c0c-bf92-b3ca83db5341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skinMode">
+      <UniqueIdentifier>{d9b20b08-ff0d-46eb-b9eb-485c220d4052}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Editor\ArikaraSkinEditor.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\include\ArikaraSkin.h">
+      <Filter>ArikaraMaya\include</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\include\ArikaraSkinEditorCmd.h">
+      <Filter>ArikaraMaya\include</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\include\MayaSkinFunction.h">
+      <Filter>ArikaraMaya\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\WeightEditionTab.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalDefine.h" />
+    <ClInclude Include="Editor\VertexTab.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\MirrorWeightWidget.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\command\ArikaraMirrorWeightCmd.h">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\command\ArikaraSkinEditorSetWeightCmd.h">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClInclude>
+    <ClInclude Include="Delegate\Delegate.h">
+      <Filter>Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\command\ArikaraInfluenceCmd.h">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="ArikaraMaya\command\ArikaraTransferWeightCmd.h">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\ArikaraOptions.h">
+      <Filter>ArikaraMaya</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\command\ArikaraSkinDataCmd.h">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\SkinDataWidget.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\command\ArikaraAttachSkinCmd.h">
+      <Filter>ArikaraMaya\command</Filter>
+    </ClInclude>
+    <ClInclude Include="ArikaraMaya\include\ArikaraMath.h">
+      <Filter>ArikaraMaya\include</Filter>
+    </ClInclude>
+    <ClInclude Include="skinMode\SkinModeBase.h">
+      <Filter>skinMode</Filter>
+    </ClInclude>
+    <ClInclude Include="skinMode\InteractiveEdit.h">
+      <Filter>skinMode</Filter>
+    </ClInclude>
+    <ClInclude Include="skinMode\VertexInfluenceData.h">
+      <Filter>skinMode</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArikaraSkinEditor.pro" />
+    <None Include="qtconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt" />
+  </ItemGroup>
+</Project>

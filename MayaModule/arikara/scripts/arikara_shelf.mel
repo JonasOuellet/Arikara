@@ -1,0 +1,66 @@
+global proc arikara_shelf () {
+	global string $gShelfTopLevel;
+	
+	//store the current shelf.
+	string $curShelf = `tabLayout -q -selectTab $gShelfTopLevel`;
+
+	string $ArikaraShelfName = "Arikara";
+	
+	string $ArikaraShelfPath = $gShelfTopLevel + "|" + $ArikaraShelfName;
+	if (`layout -q -ex $ArikaraShelfPath`)
+	{
+		return;
+	}
+	
+	addNewShelfTab "Arikara";
+	
+	string $modulePath = `moduleInfo -path -mn "arikara"`;
+	string $iconPath = $modulePath + "/icons/";
+	
+	shelfButton
+		-parent "Arikara"
+		-enable 1 -visible 1 -preventOverride 0
+		-label "" -annotation "Show Arikara Skin Editor" 
+		-image ($iconPath + "arikaraIconSmall.png") -style "iconOnly" -noBackground 1
+		-align "center" -marginWidth 1 -marginHeight 1
+		-command "arikaraSkinEditor -s"
+		-sourceType "mel" 
+		-commandRepeatable 0
+		"arikaraShowTool";
+	
+	shelfButton
+		-parent "Arikara"
+		-enable 1 -visible 1 -preventOverride 0
+		-label "" -annotation "Set Current Joint"
+		-image ($iconPath + "arikara_SetJoint.png") -style "iconOnly" -noBackground 1
+		-align "center" -marginWidth 1 -marginHeight 1
+		-command "arikara_SetCurrentJoint();"
+		-sourceType "mel"
+		-commandRepeatable 0
+		"arikaraSetJoint";
+
+	shelfButton
+		-parent "Arikara"
+		-enable 1 -visible 1 -preventOverride 0
+		-label "" -annotation "Clean Skin"
+		-image ($iconPath + "arikara_CleanSkin.png") -style "iconOnly" -noBackground 1
+		-align "center" -marginWidth 1 -marginHeight 1
+		-command "from arikara import cleanSkin;cleanSkin()"
+		-sourceType "python"
+		-commandRepeatable 0
+		"arikaraCleanSkin";
+
+	shelfButton
+		-parent "Arikara"
+		-enable 1 -visible 1 -preventOverride 0
+		-label "" -annotation "Reset Bind Pose"
+		-image ($iconPath + "arikara_ResetBindPose.png") -style "iconOnly" -noBackground 1
+		-align "center" -marginWidth 1 -marginHeight 1
+		-command "from arikara import resetBindPose;resetBindPose()"
+		-sourceType "python"
+		-commandRepeatable 0
+		"arikaraResetBindPose";				
+
+	tabLayout -e -selectTab $curShelf $gShelfTopLevel;
+	
+}

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArikaraSkinEditor", "ArikaraSkinEditor\ArikaraSkinEditor.vcxproj", "{219CFD9E-F765-4945-939F-D5B857306806}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{967096EE-97CD-42AA-881A-E85D10A17F56}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\source\index.rst = Doc\source\index.rst
+		Doc\source\optionfile.rst = Doc\source\optionfile.rst
+		Doc\source\test.rst = Doc\source\test.rst
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_command", "_command", "{51031B5A-EF1D-4A26-9AA9-92B9075238BE}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\source\_commands\arikaraInfluence.rst = Doc\source\_commands\arikaraInfluence.rst
+		Doc\source\_commands\arikaraMirrorWeight.rst = Doc\source\_commands\arikaraMirrorWeight.rst
+		Doc\source\_commands\arikaraSkinData.rst = Doc\source\_commands\arikaraSkinData.rst
+		Doc\source\_commands\arikaraTransferWeight.rst = Doc\source\_commands\arikaraTransferWeight.rst
+		Doc\source\_commands\index.rst = Doc\source\_commands\index.rst
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug2017|x64 = Debug2017|x64
+		Debug2018|x64 = Debug2018|x64
+		Release2017|x64 = Release2017|x64
+		Release2018|x64 = Release2018|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{219CFD9E-F765-4945-939F-D5B857306806}.Debug2017|x64.ActiveCfg = Debug2017|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Debug2017|x64.Build.0 = Debug2017|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Debug2018|x64.ActiveCfg = Debug2018|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Debug2018|x64.Build.0 = Debug2018|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Release2017|x64.ActiveCfg = Release2017|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Release2017|x64.Build.0 = Release2017|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Release2018|x64.ActiveCfg = Release2018|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Release2018|x64.Build.0 = Release2018|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51031B5A-EF1D-4A26-9AA9-92B9075238BE} = {967096EE-97CD-42AA-881A-E85D10A17F56}
+	EndGlobalSection
+EndGlobal

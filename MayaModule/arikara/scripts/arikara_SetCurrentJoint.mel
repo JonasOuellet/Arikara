@@ -1,0 +1,9 @@
+global proc arikara_SetCurrentJoint()
+{
+    string $sel[] = `ls -selection -type "joint"`;
+
+    if (`size $sel` > 0)
+    {
+        arikaraSkinEditor -si $sel[0];
+    }
+};
