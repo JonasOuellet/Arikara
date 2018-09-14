@@ -1,7 +1,0 @@
-﻿  Rebuilding All arikara 2017 Release
-  Generate Make files:
-  ----------------------------------------
-          1 file(s) copied.
-  Starting build
-  ----------------------------------------
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.MakeFile.Targets(46,5): warning MSB5021: "cmd" and its child processes are being terminated in order to cancel the build.
