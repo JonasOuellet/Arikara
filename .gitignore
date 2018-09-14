@@ -36,4 +36,15 @@
 *.db
 *.VC.dp
 *.idb
+*.opendb
+*.log
+*.pdb
+*.ilk
+*.exp
 
+ArikaraSkinEditor/debug/
+ArikaraSkinEditor/release/
+ArikaraSkinEditor/Debug2017/
+ArikaraSkinEditor/Release2017/
+ArikaraSkinEditor/Debug2018/
+ArikaraSkinEditor/Release2018/
