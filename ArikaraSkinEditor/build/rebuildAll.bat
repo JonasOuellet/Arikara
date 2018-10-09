@@ -18,6 +18,8 @@ call python %ARI_LOC%\build\replaceOutput.py %ARI_LOC%\makefile.Debug %ARI_VERSI
 call python %ARI_LOC%\build\replaceOutput.py %ARI_LOC%\makefile.Release %ARI_VERSION%
 
 IF NOT DEFINED MAKE_FILE (
+	echo Cleaning files ---------------------------
+	call %~dp0clean.bat
 	IF "%ARI_CONFIG%"=="Release" (
 		if not exist "%ARI_LOC%\release" mkdir "%ARI_LOC%\release"
 	) ELSE (

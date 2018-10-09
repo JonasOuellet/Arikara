@@ -11,7 +11,7 @@ MAKEFILE      = makefile.Release
 
 CC            = cl
 CXX           = cl
-DEFINES       = -DUNICODE -DWIN32 -DWIN64 -DNDEBUG -D_WINDOWS -DNT_PLUGIN -DQT_NO_DEBUG -DQT_PLUGIN -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DUNICODE -DWIN32 -DWIN64 -DNDEBUG -D_WINDOWS -DNT_PLUGIN -DQT_NO_DEBUG -DQT_PLUGIN -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DM2017 -DMDEBUG
 CFLAGS        = -nologo -Zc:wchar_t /FD /GS -O2 -MD -W3 $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t /FD /GS -O2 -MD -W3 -w34100 -w34189 -w44996 -GR -EHsc $(DEFINES)
 INCPATH       = -I. -I"C:\Program Files\Autodesk\Maya2017\include" -I"C:\Program Files\Autodesk\Maya2017\include" -I"C:\Program Files\Autodesk\Maya2017\include\QtWidgets" -I"C:\Program Files\Autodesk\Maya2017\include\QtGui" -I"C:\Program Files\Autodesk\Maya2017\include\QtCore" -Irelease -I"C:\Program Files\Autodesk\Maya2017\mkspecs\win32-msvc2012" 

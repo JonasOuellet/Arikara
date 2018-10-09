@@ -13,7 +13,6 @@
 #include <maya/MSelectionList.h>
 
 
-
 SkinDataWidget::SkinDataWidget(QWidget *parent /*= 0*/) : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout;
@@ -328,7 +327,7 @@ void SkinDataWidget::loadSkin()
 bool SkinDataWidget::isValidPath(MString& path)
 {
     std::string tmp = le_path->text().toStdString();
-    if (tmp.size() > 0)
+    if (tmp.length() > 0)
     {
         int comp = tmp.compare(ArikaraSkinDataCmd::defaultPath.asChar());
         if (comp != 0)

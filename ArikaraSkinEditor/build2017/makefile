@@ -8,9 +8,9 @@
 
 MAKEFILE      = makefile
 
-first: debug
-install: debug-install
-uninstall: debug-uninstall
+first: release
+install: release-install
+uninstall: release-uninstall
 QMAKE         = "C:\Program Files\Autodesk\Maya2017\devkit\bin\qmake.exe"
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -26,31 +26,10 @@ SYMLINK       = $(QMAKE) -install ln -f -s
 DEL_DIR       = rmdir
 MOVE          = move
 SUBTARGETS    =  \
-		debug \
-		release
+		release \
+		debug
 
 
-debug: FORCE
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug
-debug-make_first: FORCE
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug 
-debug-all: FORCE
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug all
-debug-clean: FORCE
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug clean
-debug-distclean: FORCE
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug distclean
-debug-install: FORCE
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug install
-debug-uninstall: FORCE
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug uninstall
 release: FORCE
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	$(MAKE) -f $(MAKEFILE).Release
@@ -72,6 +51,27 @@ release-install: FORCE
 release-uninstall: FORCE
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	$(MAKE) -f $(MAKEFILE).Release uninstall
+debug: FORCE
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	$(MAKE) -f $(MAKEFILE).Debug
+debug-make_first: FORCE
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	$(MAKE) -f $(MAKEFILE).Debug 
+debug-all: FORCE
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	$(MAKE) -f $(MAKEFILE).Debug all
+debug-clean: FORCE
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	$(MAKE) -f $(MAKEFILE).Debug clean
+debug-distclean: FORCE
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	$(MAKE) -f $(MAKEFILE).Debug distclean
+debug-install: FORCE
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	$(MAKE) -f $(MAKEFILE).Debug install
+debug-uninstall: FORCE
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	$(MAKE) -f $(MAKEFILE).Debug uninstall
 
 makefile: ArikaraSkinEditor.pro "C:\Program Files\Autodesk\Maya2017\mkspecs\win32-msvc2012\qmake.conf" "C:\Program Files\Autodesk\Maya2017\mkspecs\features\spec_pre.prf" \
 		"C:\Program Files\Autodesk\Maya2017\mkspecs\common\angle.conf" \
@@ -353,36 +353,34 @@ qmake: FORCE
 
 qmake_all: FORCE
 
-make_first: debug-make_first release-make_first  FORCE
-all: debug-all release-all  FORCE
-clean: debug-clean release-clean  FORCE
+make_first: release-make_first debug-make_first  FORCE
+all: release-all debug-all  FORCE
+clean: release-clean debug-clean  FORCE
 	-$(DEL_FILE) arikaraSkinEditor.exp
-	-$(DEL_FILE) arikaraSkinEditor.ilk
-	-$(DEL_FILE) arikaraSkinEditor.idb
-distclean: debug-distclean release-distclean  FORCE
+distclean: release-distclean debug-distclean  FORCE
 	-$(DEL_FILE) makefile
-	-$(DEL_FILE) arikaraSkinEditor.lib arikaraSkinEditor.pdb
+	-$(DEL_FILE) arikaraSkinEditor.lib
 
-debug-mocclean:
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug mocclean
 release-mocclean:
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	$(MAKE) -f $(MAKEFILE).Release mocclean
-mocclean: debug-mocclean release-mocclean
-
-debug-mocables:
+debug-mocclean:
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	$(MAKE) -f $(MAKEFILE).Debug mocables
+	$(MAKE) -f $(MAKEFILE).Debug mocclean
+mocclean: release-mocclean debug-mocclean
+
 release-mocables:
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	$(MAKE) -f $(MAKEFILE).Release mocables
-mocables: debug-mocables release-mocables
+debug-mocables:
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	$(MAKE) -f $(MAKEFILE).Debug mocables
+mocables: release-mocables debug-mocables
 
 check: first
 
 benchmark: first
 FORCE:
 
-$(MAKEFILE).Debug: makefile
 $(MAKEFILE).Release: makefile
+$(MAKEFILE).Debug: makefile

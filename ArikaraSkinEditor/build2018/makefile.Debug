@@ -11,7 +11,7 @@ MAKEFILE      = makefile.Debug
 
 CC            = cl
 CXX           = cl
-DEFINES       = -DUNICODE -DWIN32 -DWIN64 -DNDEBUG -D_WINDOWS -DNT_PLUGIN -DQT_PLUGIN -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DUNICODE -DWIN32 -DWIN64 -DNDEBUG -D_WINDOWS -DNT_PLUGIN -DQT_PLUGIN -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DM2018 -DMDEBUG
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings /FD /GS -Zi -MDd -W3 -w44456 -w44457 -w44458 /Fddebug\arikaraSkinEditor.pdb $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zc:throwingNew /FD /GS -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -GR -EHsc /Fddebug\arikaraSkinEditor.pdb $(DEFINES)
 INCPATH       = -I. -I"C:\Program Files\Autodesk\Maya2018\include" -I"C:\Program Files\Autodesk\Maya2018\include" -I"C:\Program Files\Autodesk\Maya2018\include\QtWidgets" -I"C:\Program Files\Autodesk\Maya2018\include\QtGui" -I"C:\Program Files\Autodesk\Maya2018\include\QtCore" -Idebug -I"C:\Program Files\Autodesk\Maya2018\mkspecs\win32-msvc2015" 
@@ -140,7 +140,7 @@ DIST          =  ArikaraMaya\include\ArikaraSkinEditorCmd.h \
 QMAKE_TARGET  = arikaraSkinEditor
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = arikaraSkinEditor.mll
-DESTDIR_TARGET = E:\OneDrive\maya\MayaModule\arikara\plug-ins\2018\arikaraSkinEditor.mll
+DESTDIR_TARGET = E:\Arikara\MayaModule\arikara\plug-ins\2018\arikaraSkinEditor.mll
 
 ####### Implicit rules
 
@@ -501,7 +501,7 @@ debug\moc_VertexTab.cpp: ArikaraMaya\include\ArikaraSkin.h \
 		"C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qlabel" \
 		"C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qlabel.h" \
 		Editor\VertexTab.h
-	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/OneDrive/maya/ArikaraMaya/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\VertexTab.h -o debug\moc_VertexTab.cpp
+	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/Arikara/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\VertexTab.h -o debug\moc_VertexTab.cpp
 
 debug\moc_arikaraSkinEditor.cpp: "C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qwidget" \
 		"C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qwidget.h" \
@@ -653,7 +653,7 @@ debug\moc_arikaraSkinEditor.cpp: "C:\Program Files\Autodesk\Maya2018\include\qtw
 		"C:\Program Files\Autodesk\Maya2018\include\maya\MEventMessage.h" \
 		"C:\Program Files\Autodesk\Maya2018\include\maya\MMessage.h" \
 		Editor\arikaraSkinEditor.h
-	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/OneDrive/maya/ArikaraMaya/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\arikaraSkinEditor.h -o debug\moc_arikaraSkinEditor.cpp
+	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/Arikara/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\arikaraSkinEditor.h -o debug\moc_arikaraSkinEditor.cpp
 
 debug\moc_WeightEditionTab.cpp: "C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qwidget" \
 		"C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qwidget.h" \
@@ -842,7 +842,7 @@ debug\moc_WeightEditionTab.cpp: "C:\Program Files\Autodesk\Maya2018\include\qtwi
 		skinMode\VertexInfluenceData.h \
 		skinMode\SkinModeBase.h \
 		Editor\WeightEditionTab.h
-	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/OneDrive/maya/ArikaraMaya/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\WeightEditionTab.h -o debug\moc_WeightEditionTab.cpp
+	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/Arikara/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\WeightEditionTab.h -o debug\moc_WeightEditionTab.cpp
 
 debug\moc_MirrorWeightWidget.cpp: "C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qgroupbox" \
 		"C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qgroupbox.h" \
@@ -974,7 +974,7 @@ debug\moc_MirrorWeightWidget.cpp: "C:\Program Files\Autodesk\Maya2018\include\qt
 		"C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qdoublespinbox" \
 		"C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qspinbox.h" \
 		Editor\MirrorWeightWidget.h
-	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/OneDrive/maya/ArikaraMaya/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\MirrorWeightWidget.h -o debug\moc_MirrorWeightWidget.cpp
+	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/Arikara/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\MirrorWeightWidget.h -o debug\moc_MirrorWeightWidget.cpp
 
 debug\moc_SkinDataWidget.cpp: "C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qwidget" \
 		"C:\Program Files\Autodesk\Maya2018\include\qtwidgets\qwidget.h" \
@@ -1100,7 +1100,7 @@ debug\moc_SkinDataWidget.cpp: "C:\Program Files\Autodesk\Maya2018\include\qtwidg
 		"C:\Program Files\Autodesk\Maya2018\include\QtGui\qvalidator.h" \
 		"C:\Program Files\Autodesk\Maya2018\include\QtCore\qregularexpression.h" \
 		Editor\SkinDataWidget.h
-	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/OneDrive/maya/ArikaraMaya/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\SkinDataWidget.h -o debug\moc_SkinDataWidget.cpp
+	"C:\Program Files\Autodesk\Maya2018\devkit\bin\moc.exe" $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I"C:/Program Files/Autodesk/Maya2018/mkspecs/win32-msvc2015" -IE:/Arikara/ArikaraSkinEditor -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include" -I"C:/Program Files/Autodesk/Maya2018/include/QtWidgets" -I"C:/Program Files/Autodesk/Maya2018/include/QtGui" -I"C:/Program Files/Autodesk/Maya2018/include/QtCore" Editor\SkinDataWidget.h -o debug\moc_SkinDataWidget.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:

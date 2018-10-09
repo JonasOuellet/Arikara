@@ -1,6 +1,5 @@
 include(qtconfig)
 
-CONFIG += debug
 QT += widgets
 TARGET = arikaraSkinEditor
 HEADERS += ArikaraMaya/include/ArikaraSkinEditorCmd.h \

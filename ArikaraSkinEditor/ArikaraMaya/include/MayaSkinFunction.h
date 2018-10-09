@@ -85,7 +85,7 @@ namespace ArikaraSelection
 	unsigned int ConvertFacesToVertex(const MDagPath &pObject, const MObject &pFaceComponent, MObject &pVertexComponent);
     unsigned int ConvertEdgesToVertex(const MDagPath &pObject, const MObject &pEdgeComponent, MObject &pVertexComponent);
 
-	const char* GetSelectedObjectName();
+	std::string GetSelectedObjectName();
 
     bool ConvertComponentToVertex(const MDagPath &pObject, const MObject &pCurrentComponent, MObject &pVertexComponent,
         unsigned int * vertexCount = nullptr);

@@ -716,7 +716,7 @@ unsigned int ArikaraSelection::ConvertEdgesToVertex(const MDagPath &pObject, con
     return newIndex.elementCount();
 }
 
-const char* ArikaraSelection::GetSelectedObjectName()
+std::string ArikaraSelection::GetSelectedObjectName()
 {
 	MSelectionList sel;
 	MGlobal::getActiveSelectionList(sel);
@@ -725,7 +725,9 @@ const char* ArikaraSelection::GetSelectedObjectName()
 	if (sel.length() > 0)
 	{
 		sel.getDagPath(0, obj);
-		return obj.partialPathName().asChar();
+		MString objName = obj.partialPathName();
+		std::string out(objName.asChar());
+		return out;
 	}
 	return "";
 }

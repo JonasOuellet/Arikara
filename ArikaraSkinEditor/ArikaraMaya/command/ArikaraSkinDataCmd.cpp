@@ -779,7 +779,8 @@ ariSkinData::ariSkinCluster::ariSkinCluster(MObject &pSkinCluster, MDagPath& pGe
 		{
 			MFnMatrixData matData(val);
 			MMatrix mat = matData.matrix();
-			const char* tmp = influencesDag[x].partialPathName().asChar();
+			MString tmpMString = influencesDag[x].partialPathName();
+			const char* tmp = tmpMString.asChar();
 			size_t len = strlen(tmp)+1;
 			influences[x].name = new char[len];
 			memcpy((void*)influences[x].name, tmp, len);

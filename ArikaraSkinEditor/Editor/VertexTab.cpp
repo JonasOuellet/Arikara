@@ -338,12 +338,10 @@ void TransferWeightGroupBox::pb_setTargetFromTool()
 
 void TransferWeightGroupBox::setInfluencesFromViewport(QLineEdit* pLine)
 {
-	const char* text = ArikaraSelection::GetSelectedObjectName();
-	pLine->setText(text);
+	pLine->setText(ArikaraSelection::GetSelectedObjectName().c_str());
 }
 
 void TransferWeightGroupBox::setInfluencesFromTool(QLineEdit* pLine)
 {
-	const char* text = arikaraSkin->GetCurrentInfluenceName();
-	pLine->setText(text);
+	pLine->setText(arikaraSkin->GetCurrentInfluenceName().c_str());
 }

@@ -142,7 +142,7 @@ public:
 
 	void selectLockedVert();
 
-	const char* GetCurrentInfluenceName();
+	std::string GetCurrentInfluenceName();
 
 	void setInfluenceFromName(const MString &name);
 

@@ -144,7 +144,7 @@ call $(ProjectDir)build\rebuildAll.bat
     <IntDir>$(Configuration)\</IntDir>
     <NMakeBuildCommandLine>set ARI_VERSION=2018
 set ARI_CONFIG=Release
-call$(ProjectDir)build\build.bat
+call $(ProjectDir)build\build.bat
 </NMakeBuildCommandLine>
     <NMakeCleanCommandLine>set ARI_VERSION=2018
 set ARI_CONFIG=Release

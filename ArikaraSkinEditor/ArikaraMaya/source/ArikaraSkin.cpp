@@ -448,12 +448,13 @@ void ArikaraSkin::selectLockedVert()
 	}
 }
 
-const char* ArikaraSkin::GetCurrentInfluenceName()
+std::string ArikaraSkin::GetCurrentInfluenceName()
 {
 	if (isSkinValid() && currentInfluence != -1)
 	{
 		MString name = InfluencesList[currentInfluence].partialPathName();
-		return name.asChar();
+		std::string out(name.asChar());
+		return out;
 	}
 	return "";
 }
