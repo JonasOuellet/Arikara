@@ -151,7 +151,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ArikaraSkinEditor.pro" />
-    <None Include="qtconfig" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="TODO.txt" />

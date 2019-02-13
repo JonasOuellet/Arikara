@@ -23,7 +23,7 @@ global proc arikara_shelf () {
 		-label "" -annotation "Show Arikara Skin Editor" 
 		-image ($iconPath + "arikaraIconSmall.png") -style "iconOnly" -noBackground 1
 		-align "center" -marginWidth 1 -marginHeight 1
-		-command "arikaraSkinEditor -s"
+		-command "autoLoadPlugin(\"\", \"arikaraSkinEditor\", \"\");arikaraSkinEditor -s;"
 		-sourceType "mel" 
 		-commandRepeatable 0
 		"arikaraShowTool";

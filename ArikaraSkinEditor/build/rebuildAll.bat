@@ -7,7 +7,7 @@ set ARI_LOC=%RETVAL%
 @echo Generate Make files:
 @echo ----------------------------------------
 
-copy %ARI_LOC%\build%ARI_VERSION%\qtconfig %ARI_LOC%\qtconfig"
+copy %ARI_LOC%\build\build%ARI_VERSION%\qtconfig %ARI_LOC%\qtconfig
 
 set DEVKIT_LOCATION=C:\Program Files\Autodesk\Maya%ARI_VERSION%
 set MAYA_LOCATION=C:\Program Files\Autodesk\Maya%ARI_VERSION%
@@ -36,9 +36,9 @@ IF NOT DEFINED MAKE_FILE (
 @echo Copy file and clean folder
 @echo ----------------------------------------
 
-copy %ARI_LOC%\makefile %ARI_LOC%\build%ARI_VERSION%\makefile
-copy %ARI_LOC%\makefile.Debug %ARI_LOC%\build%ARI_VERSION%\makefile.Debug
-copy %ARI_LOC%\makefile.Release %ARI_LOC%\build%ARI_VERSION%\makefile.Release
+copy %ARI_LOC%\makefile %ARI_LOC%\build\build%ARI_VERSION%\makefile
+copy %ARI_LOC%\makefile.Debug %ARI_LOC%\build\build%ARI_VERSION%\makefile.Debug
+copy %ARI_LOC%\makefile.Release %ARI_LOC%\build\build%ARI_VERSION%\makefile.Release
 del %ARI_LOC%\makefile
 del %ARI_LOC%\makefile.Debug
 del %ARI_LOC%\makefile.Release

@@ -12,8 +12,8 @@ IF "%ARI_CONFIG%"=="Release" (
 )
 cd %ARI_LOC%
 
-copy %ARI_LOC%\build%ARI_VERSION%\makefile %ARI_LOC%\makefile
-copy %ARI_LOC%\build%ARI_VERSION%\makefile.%ARI_CONFIG% %ARI_LOC%\makefile.%ARI_CONFIG%
+copy %ARI_LOC%\build\build%ARI_VERSION%\makefile %ARI_LOC%\makefile
+copy %ARI_LOC%\build\build%ARI_VERSION%\makefile.%ARI_CONFIG% %ARI_LOC%\makefile.%ARI_CONFIG%
 
 "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" /f %ARI_LOC%\Makefile.%ARI_CONFIG%
 

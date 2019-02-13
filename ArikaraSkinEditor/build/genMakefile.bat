@@ -4,3 +4,6 @@ call %~dp0rebuildAll.bat
 
 set ARI_VERSION=2018
 call %~dp0rebuildAll.bat
+
+set ARI_VERSION=2019
+call %~dp0rebuildAll.bat
