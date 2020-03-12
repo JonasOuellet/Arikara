@@ -23,7 +23,8 @@ HEADERS += ArikaraMaya/include/ArikaraSkinEditorCmd.h \
            ArikaraMaya/include/ArikaraMath.h \
            skinMode/InteractiveEdit.h \
            skinMode/skinModeBase.h \
-           skinMode/VertexInfluenceData.h
+           skinMode/VertexInfluenceData.h \
+		   ArikaraMaya/nodes/ArikaraWeightDisplayNode.h
 SOURCES += pluginMain.cpp \
            ArikaraMaya/source/ArikaraSkinEditorCmd.cpp \
 		   Editor/VertexTab.cpp \
@@ -44,4 +45,5 @@ SOURCES += pluginMain.cpp \
            ArikaraMaya/source/ArikaraMath.cpp \
            skinMode/InteractiveEdit.cpp \
            skinMode/skinModeBase.cpp \
-           skinMode/VertexInfluenceData.cpp
+           skinMode/VertexInfluenceData.cpp \
+		   ArikaraMaya/nodes/ArikaraWeightDisplayNode.cpp

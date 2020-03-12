@@ -13,6 +13,7 @@
 #include "ArikaraMaya/command/ArikaraSkinDataCmd.h"
 #include "ArikaraMaya/command/ArikaraTransferWeightCmd.h"
 #include "ArikaraMaya/command/ArikaraAttachSkinCmd.h"
+#include "ArikaraMaya/nodes/ArikaraWeightDisplayNode.h"
 
 #include <maya/MFnPlugin.h>
 #include <maya/MGlobal.h>
@@ -41,6 +42,8 @@ MStatus initializePlugin( MObject obj )
 	status = plugin.registerCommand("arikaraMirrorWeight", ArikaraMirrorWeightCmd::creator, ArikaraMirrorWeightCmd::newSyntax);
 	status = plugin.registerCommand("arikaraSkinEditorSetWeight", ArikaraSkinEditorSetWeightCmd::creator);
 	status = plugin.registerCommand("arikaraSkinEditor", ArikaraSkinEditorCmd::creator, ArikaraSkinEditorCmd::newSyntax);
+	status = plugin.registerNode("arikaraWeightDisplay", ArikaraWeightDisplayNode::id, ArikaraWeightDisplayNode::creator,
+		ArikaraWeightDisplayNode::initialize, MPxNode::kDeformerNode);
 
 #ifndef NLOADOPTION
     ArikaraSkinDataCmd::Init();
@@ -87,6 +90,8 @@ MStatus uninitializePlugin( MObject obj )
 	status = plugin.deregisterCommand("arikaraInfluence");
 	status = plugin.deregisterCommand("arikaraMirrorWeight");
 	status = plugin.deregisterCommand("arikaraSkinEditorSetWeight");
+
+	status = plugin.deregisterNode(ArikaraWeightDisplayNode::id);
 
 	ArikaraSkinEditorCmd::cleanup();
 

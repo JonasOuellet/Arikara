@@ -1,7 +1,10 @@
+@echo off
+
 CALL :NORMALIZEPATH "%~dp0.."
 set ARI_LOC=%RETVAL%
-
 set CURDIR=%~dp0
+
+CALL %~dp0setpath.bat
 
 @echo Bulding arikara %ARI_VERSION% %ARI_CONFIG% in %ARI_LOC%
 
@@ -12,16 +15,16 @@ IF "%ARI_CONFIG%"=="Release" (
 )
 cd %ARI_LOC%
 
-copy %ARI_LOC%\build\build%ARI_VERSION%\makefile %ARI_LOC%\makefile
-copy %ARI_LOC%\build\build%ARI_VERSION%\makefile.%ARI_CONFIG% %ARI_LOC%\makefile.%ARI_CONFIG%
+copy %ARI_LOC%\build\build%ARI_VERSION%\makefile %ARI_LOC%\makefile > NUL
+copy %ARI_LOC%\build\build%ARI_VERSION%\makefile.%ARI_CONFIG% %ARI_LOC%\makefile.%ARI_CONFIG% > NUL
 
-"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" /f %ARI_LOC%\Makefile.%ARI_CONFIG%
+CALL %VS_PATH%\VC\vcvarsall.bat x64
+CALL %VS_PATH%\VC\bin\nmake.exe /f %ARI_LOC%\Makefile.%ARI_CONFIG%
 
 del %ARI_LOC%\makefile
 del %ARI_LOC%\makefile.%ARI_CONFIG%
 
 cd %CURDIR%
-
 
 :: ========== FUNCTIONS ==========
 EXIT /B

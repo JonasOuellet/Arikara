@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArikaraSkinEditor", "ArikaraSkinEditor\ArikaraSkinEditor.vcxproj", "{219CFD9E-F765-4945-939F-D5B857306806}"
 EndProject
@@ -29,6 +29,7 @@ Global
 		Release2017|x64 = Release2017|x64
 		Release2018|x64 = Release2018|x64
 		Release2019|x64 = Release2019|x64
+		Release2020|x64 = Release2020|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{219CFD9E-F765-4945-939F-D5B857306806}.Debug2017|x64.ActiveCfg = Debug2017|x64
@@ -43,11 +44,16 @@ Global
 		{219CFD9E-F765-4945-939F-D5B857306806}.Release2018|x64.Build.0 = Release2018|x64
 		{219CFD9E-F765-4945-939F-D5B857306806}.Release2019|x64.ActiveCfg = Release2019|x64
 		{219CFD9E-F765-4945-939F-D5B857306806}.Release2019|x64.Build.0 = Release2019|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Release2020|x64.ActiveCfg = Release2020|x64
+		{219CFD9E-F765-4945-939F-D5B857306806}.Release2020|x64.Build.0 = Release2020|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{51031B5A-EF1D-4A26-9AA9-92B9075238BE} = {967096EE-97CD-42AA-881A-E85D10A17F56}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C60E8923-2617-4814-8087-2B0004D67C81}
 	EndGlobalSection
 EndGlobal
